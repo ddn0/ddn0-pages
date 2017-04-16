@@ -1,0 +1,57 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-details">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <h1>Education and Employment</h1>
+        <ul>
+          <li>Senior Developer.
+            <a href="http://www.synthace.com/">Synthace</a>.
+            London, UK (2015-present).
+          </li>
+          <li>Ph.D. in Computer Science.
+            <a href="http://www.utexas.edu/">The University of Texas at Austin</a>.
+            Austin, TX (2007-2015).
+          </li>
+          <li><a href="http://www.sandia.gov">Sandia National Laboratories</a> Excellence in Computer Sciences Research Fellowship (2011-2014).
+          </li>
+          <li>Summer Intern.
+            <a href="http://www.google.com/">Google</a>.
+            Seattle, WA (Summer 2008).
+          </li>
+          <li>Engineer.
+            <a href="http://www.reservoir.com/">Reservoir Labs</a>.
+            New York, NY (2004-2007).
+          </li>
+          <li>B.S. in Computer Science.
+            <a href="http://www.yale.edu">Yale University</a>.
+            New Haven, CT (2000-2004).
+          </li>
+        </ul>
+      <h1>General Interest</h1>
+        <ul>
+          <li><a href="http://www.austinhabitat.org/">Building</a> </li>
+          <li><a href="http://en.wikipedia.org/wiki/Model_Misbehavior">Other</a> </li>
+          <li><a href="http://alamaya.net/">Alamaya</a> </li>
+          <li>Erdős number: 4 (Donald Nguyen -&gt; Andrew Lenharth -&gt; Richard E. Ladner -&gt; Laszlo Lovasz)</li>
+        </ul>
+    </div>
+  </template>
+
+  <script>
+    class MyDetails extends Polymer.Element {
+      static get is() { return 'my-details'; }
+    }
+
+    window.customElements.define(MyDetails.is, MyDetails);
+  </script>
+</dom-module>

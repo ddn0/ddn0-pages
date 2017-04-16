@@ -1,0 +1,28 @@
+- key: conf/asplos/NguyenP17
+  presentation: https://www.slideshare.net/DonaldNguyen7/what-scalable-programs-need-from-transactional-memory
+  preprint: /pdfs/nguyen17.pdf
+- key: conf/asplos/HassaanNP15
+  preprint: /pdfs/hassaan15.pdf
+  presentation: https://www.slideshare.net/DonaldNguyen7/kinetic-dependence-graphs
+- key: conf/asplos/NguyenLP14
+  preprint: /pdfs/nguyen14.pdf
+  presentation: https://www.slideshare.net/DonaldNguyen7/deterministic-galois-ondemand-portable-and-parameterless
+- key: conf/sosp/NguyenLP13
+  preprint: /pdfs/nguyen13.pdf
+  presentation: https://www.slideshare.net/DonaldNguyen7/a-lightweight-infrastructure-for-graph-analytics
+- key: conf/pldi/PingaliNKBHKLLMMPS11
+  preprint: /pdfs/pingali11.pdf
+- key: conf/asplos/NguyenP11
+  preprint: /pdfs/nguyen11.pdf
+  presentation: https://www.slideshare.net/DonaldNguyen7/synthesizing-concurrent-schedulers-for-irregular-algorithms
+- key: thesis
+  mdate: 2015-05-05
+  title: "Galois: A System for Parallel Execution of Irregular Algorithms"
+  booktitle: Thesis
+  preprint: /pdfs/thesis.pdf
+  presentation: https://www.slideshare.net/DonaldNguyen7/galois-a-system-for-parallel-execution-of-irregular-algorithms
+  year: 2015
+  authors:
+  - Donald D. Nguyen
+- key: conf/ics/LiaoHNZCT09
+  preprint: /pdfs/liao09.pdf

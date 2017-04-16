@@ -1,0 +1,57 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-overview">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+    </style>
+
+    <div class="card">
+      <h1><a href="http://inogolo.com/query.php?qstr=Nguyen">阮</a>·<a
+          href="http://inogolo.com/query.php?qstr=Donald">唐納德</a> / <a
+          href="https://www.youtube.com/watch?v=32wBZwWFGT4">응우엔</a> 도널드</h1>
+      <p>Software Engineer and Researcher</p>
+      <p>I received my Ph.D. in computer science in 2015 from the University of
+        Texas at Austin where my research area was software and hardware
+        techniques for parallelization. The main outcome of which was the <a
+          href="http://iss.ices.utexas.edu">Galois system</a>, an adaptive
+        scheduling software library, which enables users to easily write
+        high-performance programs that can outperform handwritten alternatives,
+        in some cases, by orders of magnitude.</p>
+      <p>Galois has has been used to implement scientific computing and machine
+        learning algorithms like adaptive mesh refinement, low-rank matrix
+        decompositions, clustering, document classification, finding
+        eigenvalues and sparse matrix codes.</p>
+      <p>Currently, I'm at <a href="http://www.synthace.com">Synthace</a>
+        where I'm is working on bring lab management and data analysis services
+        to the cloud.</p>
+      <p>
+        <a href="mailto:d.nguyen@replace-this-with-my-employer.com"><paper-icon-button class="icon" icon="icons:mail"></paper-icon-button></a>
+
+        <a target="_blank" href="http://www.github.com/ddn0"><paper-icon-button src="https://www.github.com/favicon.ico" class="icon"></paper-icon-button></a>
+        <a target="_blank" href="https://www.linkedin.com/pub/donald-nguyen/4/a10/7ab"><paper-icon-button src="https://www.linkedin.com/favicon.ico" class="icon"></paper-icon-button></a>
+        <a target="_blank" href="http://twitter.com/ddn0"><paper-icon-button src="https://www.twitter.com/favicon.ico" class="icon"></paper-icon-button></a>
+        <a target="_blank" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nguyen:Donald.html"><paper-button>DBLP</paper-button></a>
+      </p>
+    </div>
+  </template>
+
+  <script>
+    class MyOverview extends Polymer.Element {
+      static get is() { return 'my-overview'; }
+    }
+
+    window.customElements.define(MyOverview.is, MyOverview);
+  </script>
+</dom-module>

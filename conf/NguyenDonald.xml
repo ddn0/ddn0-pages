@@ -1,0 +1,386 @@
+<dblpperson name="Donald Nguyen" n="23">
+<person key="homepages/48/4701" mdate="2015-02-26">
+<author>Donald Nguyen</author>
+<author>Donald D. Nguyen</author>
+</person>
+<r><inproceedings key="conf/asplos/NguyenP17" mdate="2017-04-05">
+<author>Donald Nguyen</author>
+<author>Keshav Pingali</author>
+<title>What Scalable Programs Need from Transactional Memory.</title>
+<pages>105-118</pages>
+<year>2017</year>
+<booktitle>ASPLOS</booktitle>
+<ee>http://doi.acm.org/10.1145/3037697.3037750</ee>
+<crossref>conf/asplos/2017</crossref>
+<url>db/conf/asplos/asplos2017.html#NguyenP17</url>
+</inproceedings>
+</r>
+<r><article key="journals/cacm/LenharthNP16" mdate="2016-04-27">
+<author>Andrew Lenharth</author>
+<author>Donald Nguyen</author>
+<author>Keshav Pingali</author>
+<title>Parallel graph analytics.</title>
+<pages>78-87</pages>
+<year>2016</year>
+<volume>59</volume>
+<journal>Commun. ACM</journal>
+<number>5</number>
+<ee>http://doi.acm.org/10.1145/2901919</ee>
+<url>db/journals/cacm/cacm59.html#LenharthNP16</url>
+</article>
+</r>
+<r><inproceedings key="conf/iccS/PaszynskaWLNP16" mdate="2016-06-28">
+<author>Anna Paszynska</author>
+<author>Maciej Wozniak</author>
+<author>Andrew Lenharth</author>
+<author>Donald Nguyen</author>
+<author>Keshav Pingali</author>
+<title>Hypergraph Grammars in Non-stationary hp-adaptive Finite Element Method.</title>
+<pages>875-886</pages>
+<year>2016</year>
+<booktitle>ICCS</booktitle>
+<ee>http://dx.doi.org/10.1016/j.procs.2016.05.314</ee>
+<crossref>conf/iccS/2016</crossref>
+<url>db/conf/iccS/iccS2016.html#PaszynskaWLNP16</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ics/MalekiNLGPP16" mdate="2016-07-14">
+<author>Saeed Maleki</author>
+<author>Donald Nguyen</author>
+<author>Andrew Lenharth</author>
+<author>Mar&#237;a Jes&#250;s Garzar&#225;n</author>
+<author>David A. Padua</author>
+<author>Keshav Pingali</author>
+<title>DSMR: A Parallel Algorithm for Single-Source Shortest Path Problem.</title>
+<pages>32:1-32:14</pages>
+<year>2016</year>
+<booktitle>ICS</booktitle>
+<ee>http://doi.acm.org/10.1145/2925426.2926287</ee>
+<crossref>conf/ics/2016</crossref>
+<url>db/conf/ics/ics2016.html#MalekiNLGPP16</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ppopp/MalekiNLGPP16" mdate="2016-04-07">
+<author>Saeed Maleki</author>
+<author>Donald Nguyen</author>
+<author>Andrew Lenharth</author>
+<author>Mar&#237;a Jes&#250;s Garzar&#225;n</author>
+<author>David A. Padua</author>
+<author>Keshav Pingali</author>
+<title>DSMR: a shared and distributed memory algorithm for single-source shortest path problem.</title>
+<pages>39:1-39:2</pages>
+<year>2016</year>
+<booktitle>PPOPP</booktitle>
+<ee>http://doi.acm.org/10.1145/2851141.2851183</ee>
+<crossref>conf/ppopp/2016</crossref>
+<url>db/conf/ppopp/ppopp2016.html#MalekiNLGPP16</url>
+</inproceedings>
+</r>
+<r><article key="journals/sp/PaszynskaPJWGGA15" mdate="2015-05-28">
+<author>Anna Paszynska</author>
+<author>Maciej Paszynski</author>
+<author>Konrad Jopek</author>
+<author>Maciej Wozniak</author>
+<author>Damian Goik</author>
+<author>Piotr Gurgul</author>
+<author>Hassan AbouEisha</author>
+<author>Mikhail Moshkov</author>
+<author>Victor Manuel Calo</author>
+<author>Andrew Lenharth</author>
+<author>Donald Nguyen</author>
+<author>Keshav Pingali</author>
+<title>Quasi-Optimal Elimination Trees for 2D Grids with Singularities.</title>
+<pages>303024:1-303024:18</pages>
+<year>2015</year>
+<volume>2015</volume>
+<journal>Scientific Programming</journal>
+<ee>http://dx.doi.org/10.1155/2015/303024</ee>
+<url>db/journals/sp/sp2015.html#PaszynskaPJWGGA15</url>
+</article>
+</r>
+<r><inproceedings key="conf/asplos/HassaanNP15" mdate="2015-02-26">
+<author>Muhammad Amber Hassaan</author>
+<author>Donald D. Nguyen</author>
+<author>Keshav Pingali</author>
+<title>Kinetic Dependence Graphs.</title>
+<pages>457-471</pages>
+<year>2015</year>
+<booktitle>ASPLOS</booktitle>
+<ee>http://doi.acm.org/10.1145/2694344.2694363</ee>
+<crossref>conf/asplos/2015</crossref>
+<url>db/conf/asplos/asplos2015.html#HassaanNP15</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/europar/LenharthNP15" mdate="2015-07-27">
+<author>Andrew Lenharth</author>
+<author>Donald Nguyen</author>
+<author>Keshav Pingali</author>
+<title>Priority Queues Are Not Good Concurrent Priority Schedulers.</title>
+<pages>209-221</pages>
+<year>2015</year>
+<booktitle>Euro-Par</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-662-48096-0_17</ee>
+<crossref>conf/europar/2015</crossref>
+<url>db/conf/europar/europar2015.html#LenharthNP15</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/iccS/PaszynskaJBPGLN15" mdate="2015-07-10">
+<author>Anna Paszynska</author>
+<author>Konrad Jopek</author>
+<author>Krzysztof Banas</author>
+<author>Maciej Paszynski</author>
+<author>Piotr Gurgul</author>
+<author>Andrew Lenerth</author>
+<author>Donald Nguyen</author>
+<author>Keshav Pingali</author>
+<author>Lisandro Dalc&#237;n</author>
+<author>Victor M. Calo</author>
+<title>Telescopic Hybrid Fast Solver for 3D Elliptic Problems with Point Singularities.</title>
+<pages>2744-2748</pages>
+<year>2015</year>
+<booktitle>ICCS</booktitle>
+<ee>http://dx.doi.org/10.1016/j.procs.2015.05.415</ee>
+<crossref>conf/iccS/2015</crossref>
+<url>db/conf/iccS/iccS2015.html#PaszynskaJBPGLN15</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/parco/BhatLNYP15" mdate="2016-05-13">
+<author>Akshatha Bhat</author>
+<author>Andrew Lenharth</author>
+<author>Donald Nguyen</author>
+<author>Qing Yi</author>
+<author>Keshav Pingali</author>
+<title>Automatic Tuning of Task Scheduling Policies on Multicore Architectures.</title>
+<pages>11-21</pages>
+<year>2015</year>
+<booktitle>PARCO</booktitle>
+<ee>http://dx.doi.org/10.3233/978-1-61499-621-7-11</ee>
+<crossref>conf/parco/2015</crossref>
+<url>db/conf/parco/parco2015.html#BhatLNYP15</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/asplos/NguyenLP14" mdate="2014-03-05">
+<author>Donald Nguyen</author>
+<author>Andrew Lenharth</author>
+<author>Keshav Pingali</author>
+<title>Deterministic galois: on-demand, portable and parameterless.</title>
+<pages>499-512</pages>
+<year>2014</year>
+<booktitle>ASPLOS</booktitle>
+<ee>http://doi.acm.org/10.1145/2541940.2541964</ee>
+<crossref>conf/asplos/2014</crossref>
+<url>db/conf/asplos/asplos2014.html#NguyenLP14</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/iccS/GoikJPLNP14" mdate="2014-07-03">
+<author>Damian Goik</author>
+<author>Konrad Jopek</author>
+<author>Maciej Paszynski</author>
+<author>Andrew Lenharth</author>
+<author>Donald Nguyen</author>
+<author>Keshav Pingali</author>
+<title>Graph Grammar based Multi-thread Multi-frontal Direct Solver with Galois Scheduler.</title>
+<pages>960-969</pages>
+<year>2014</year>
+<booktitle>ICCS</booktitle>
+<ee>http://dx.doi.org/10.1016/j.procs.2014.05.086</ee>
+<crossref>conf/iccS/2014</crossref>
+<url>db/conf/iccS/iccS2014.html#GoikJPLNP14</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/sc/KarantasisLNGP14" mdate="2015-07-01">
+<author>Konstantinos I. Karantasis</author>
+<author>Andrew Lenharth</author>
+<author>Donald Nguyen</author>
+<author>Mar&#237;a Jes&#250;s Garzar&#225;n</author>
+<author>Keshav Pingali</author>
+<title>Parallelization of Reordering Algorithms for Bandwidth and Wavefront Reduction.</title>
+<pages>921-932</pages>
+<year>2014</year>
+<booktitle>SC</booktitle>
+<ee>http://dx.doi.org/10.1109/SC.2014.80</ee>
+<ee>http://doi.ieeecomputersociety.org/10.1109/SC.2014.80</ee>
+<crossref>conf/sc/2014</crossref>
+<url>db/conf/sc/sc2014.html#KarantasisLNGP14</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/spaa/HassaanNP14" mdate="2014-06-27">
+<author>Muhammad Amber Hassaan</author>
+<author>Donald Nguyen</author>
+<author>Keshav Pingali</author>
+<title>Brief announcement: parallelization of asynchronous variational integrators forshared memory architectures.</title>
+<pages>214-216</pages>
+<year>2014</year>
+<booktitle>SPAA</booktitle>
+<ee>http://doi.acm.org/10.1145/2612669.2612713</ee>
+<crossref>conf/spaa/2014</crossref>
+<url>db/conf/spaa/spaa2014.html#HassaanNP14</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/sosp/NguyenLP13" mdate="2013-10-17">
+<author>Donald Nguyen</author>
+<author>Andrew Lenharth</author>
+<author>Keshav Pingali</author>
+<title>A lightweight infrastructure for graph analytics.</title>
+<pages>456-471</pages>
+<year>2013</year>
+<booktitle>SOSP</booktitle>
+<ee>http://doi.acm.org/10.1145/2517349.2522739</ee>
+<crossref>conf/sosp/2013</crossref>
+<url>db/conf/sosp/sosp2013.html#NguyenLP13</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/asplos/NguyenP11" mdate="2011-03-10">
+<author>Donald Nguyen</author>
+<author>Keshav Pingali</author>
+<title>Synthesizing concurrent schedulers for irregular algorithms.</title>
+<pages>333-344</pages>
+<year>2011</year>
+<booktitle>ASPLOS</booktitle>
+<ee>http://doi.acm.org/10.1145/1950365.1950404</ee>
+<crossref>conf/asplos/2011</crossref>
+<url>db/conf/asplos/asplos2011.html#NguyenP11</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/pldi/PingaliNKBHKLLMMPS11" mdate="2011-06-07">
+<author>Keshav Pingali</author>
+<author>Donald Nguyen</author>
+<author>Milind Kulkarni</author>
+<author>Martin Burtscher</author>
+<author>Muhammad Amber Hassaan</author>
+<author>Rashid Kaleem</author>
+<author>Tsung-Hsien Lee</author>
+<author>Andrew Lenharth</author>
+<author>Roman Manevich</author>
+<author>Mario M&#233;ndez-Lojo</author>
+<author>Dimitrios Prountzos</author>
+<author>Xin Sui</author>
+<title>The tao of parallelism in algorithms.</title>
+<pages>12-25</pages>
+<year>2011</year>
+<booktitle>PLDI</booktitle>
+<ee>http://doi.acm.org/10.1145/1993498.1993501</ee>
+<crossref>conf/pldi/2011</crossref>
+<url>db/conf/pldi/pldi2011.html#PingaliNKBHKLLMMPS11</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/pldi/KulkarniNPSP11" mdate="2011-06-07">
+<author>Milind Kulkarni</author>
+<author>Donald Nguyen</author>
+<author>Dimitrios Prountzos</author>
+<author>Xin Sui</author>
+<author>Keshav Pingali</author>
+<title>Exploiting the commutativity lattice.</title>
+<pages>542-555</pages>
+<year>2011</year>
+<booktitle>PLDI</booktitle>
+<ee>http://doi.acm.org/10.1145/1993498.1993562</ee>
+<crossref>conf/pldi/2011</crossref>
+<url>db/conf/pldi/pldi2011.html#KulkarniNPSP11</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/lcpc/SuiNBP10" mdate="2011-05-14">
+<author>Xin Sui</author>
+<author>Donald Nguyen</author>
+<author>Martin Burtscher</author>
+<author>Keshav Pingali</author>
+<title>Parallel Graph Partitioning on Multicore Architectures.</title>
+<pages>246-260</pages>
+<year>2010</year>
+<booktitle>LCPC</booktitle>
+<ee>http://dx.doi.org/10.1007/978-3-642-19595-2_17</ee>
+<crossref>conf/lcpc/2010</crossref>
+<url>db/conf/lcpc/lcpc2010.html#SuiNBP10</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ppopp/Mendez-LojoNPSHKBP10" mdate="2011-02-14">
+<author>Mario M&#233;ndez-Lojo</author>
+<author>Donald Nguyen</author>
+<author>Dimitrios Prountzos</author>
+<author>Xin Sui</author>
+<author>Muhammad Amber Hassaan</author>
+<author>Milind Kulkarni</author>
+<author>Martin Burtscher</author>
+<author>Keshav Pingali</author>
+<title>Structure-driven optimizations for amorphous data-parallel programs.</title>
+<pages>3-14</pages>
+<year>2010</year>
+<booktitle>PPOPP</booktitle>
+<ee>http://doi.acm.org/10.1145/1693453.1693457</ee>
+<crossref>conf/ppopp/2010</crossref>
+<url>db/conf/ppopp/ppopp2010.html#Mendez-LojoNPSHKBP10</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/ics/LiaoHNZCT09" mdate="2010-11-08">
+<author>Shih-wei Liao</author>
+<author>Tzu-Han Hung</author>
+<author>Donald Nguyen</author>
+<author>Hucheng Zhou</author>
+<author>Chinyen Chou</author>
+<author>Chia-Heng Tu</author>
+<title>Prefetch optimizations on large-scale applications via parameter value prediction.</title>
+<pages>519-520</pages>
+<year>2009</year>
+<booktitle>ICS</booktitle>
+<ee>http://doi.acm.org/10.1145/1542275.1542359</ee>
+<crossref>conf/ics/2009</crossref>
+<url>db/conf/ics/ics2009.html#LiaoHNZCT09</url>
+</inproceedings>
+</r>
+<r><inproceedings key="conf/sc/LiaoHNCTZ09" mdate="2010-11-08">
+<author>Shih-wei Liao</author>
+<author>Tzu-Han Hung</author>
+<author>Donald Nguyen</author>
+<author>Chinyen Chou</author>
+<author>Chia-Heng Tu</author>
+<author>Hucheng Zhou</author>
+<title>Machine learning-based prefetch optimization for data center applications.</title>
+<year>2009</year>
+<booktitle>SC</booktitle>
+<ee>http://doi.acm.org/10.1145/1654059.1654116</ee>
+<crossref>conf/sc/2009</crossref>
+<url>db/conf/sc/sc2009.html#LiaoHNCTZ09</url>
+</inproceedings>
+</r>
+<coauthors n="39" nc="3">
+<co c="0"><na f="a/AbouEisha:Hassan">Hassan AbouEisha</na></co>
+<co c="0"><na f="b/Banas:Krzysztof">Krzysztof Banas</na></co>
+<co c="0"><na f="b/Bhat:Akshatha">Akshatha Bhat</na></co>
+<co c="0"><na f="b/Burtscher:Martin">Martin Burtscher</na></co>
+<co c="0" n="2"><na f="c/Calo:Victor_M=">Victor M. Calo</na><na>Victor Manuel Calo</na></co>
+<co c="1"><na f="c/Chou:Chinyen">Chinyen Chou</na></co>
+<co c="0"><na f="d/Dalc=iacute=n:Lisandro">Lisandro Dalc&#237;n</na></co>
+<co c="2"><na f="e/Ezick:James_R=">James R. Ezick</na></co>
+<co c="0"><na f="g/Garzar=aacute=n:Mar=iacute=a_Jes=uacute=s">Mar&#237;a Jes&#250;s Garzar&#225;n</na></co>
+<co c="0"><na f="g/Goik:Damian">Damian Goik</na></co>
+<co c="0"><na f="g/Gurgul:Piotr">Piotr Gurgul</na></co>
+<co c="0"><na f="h/Hassaan:Muhammad_Amber">Muhammad Amber Hassaan</na></co>
+<co c="1"><na f="h/Hung:Tzu=Han">Tzu-Han Hung</na></co>
+<co c="0"><na f="j/Jopek:Konrad">Konrad Jopek</na></co>
+<co c="0"><na f="k/Kaleem:Rashid">Rashid Kaleem</na></co>
+<co c="0"><na f="k/Karantasis:Konstantinos_I=">Konstantinos I. Karantasis</na></co>
+<co c="0"><na f="k/Kulkarni:Milind">Milind Kulkarni</na></co>
+<co c="0"><na f="l/Lee:Tsung=Hsien">Tsung-Hsien Lee</na></co>
+<co c="0"><na f="l/Lenerth:Andrew">Andrew Lenerth</na></co>
+<co c="0"><na f="l/Lenharth:Andrew">Andrew Lenharth</na></co>
+<co c="2"><na f="l/Lethin:Richard_A=">Richard A. Lethin</na></co>
+<co c="1" n="2"><na f="l/Liao:Shih=Wei">Shih-Wei Liao</na><na>Shih-wei Liao</na></co>
+<co c="2"><na f="l/Luckenbill:Samuel_B=">Samuel B. Luckenbill</na></co>
+<co c="0"><na f="m/Maleki:Saeed">Saeed Maleki</na></co>
+<co c="0"><na f="m/Manevich:Roman">Roman Manevich</na></co>
+<co c="0"><na f="m/M=eacute=ndez=Lojo:Mario">Mario M&#233;ndez-Lojo</na></co>
+<co c="0" n="2"><na f="m/Moshkov:Mikhail_Ju=">Mikhail Ju. Moshkov</na><na>Mikhail Moshkov</na></co>
+<co c="0"><na f="p/Padua:David_A=">David A. Padua</na></co>
+<co c="0"><na f="p/Paszynska:Anna">Anna Paszynska</na></co>
+<co c="0"><na f="p/Paszynski:Maciej">Maciej Paszynski</na></co>
+<co c="0"><na f="p/Pingali:Keshav">Keshav Pingali</na></co>
+<co c="0"><na f="p/Prountzos:Dimitrios">Dimitrios Prountzos</na></co>
+<co c="2"><na f="s/Starks:John">John Starks</na></co>
+<co c="0"><na f="s/Sui:Xin">Xin Sui</na></co>
+<co c="2"><na f="s/Szil=aacute=gyi:P=eacute=ter">P&#233;ter Szil&#225;gyi</na></co>
+<co c="1"><na f="t/Tu:Chia=Heng">Chia-Heng Tu</na></co>
+<co c="0"><na f="w/Wozniak:Maciej">Maciej Wozniak</na></co>
+<co c="0"><na f="y/Yi:Qing">Qing Yi</na></co>
+<co c="1"><na f="z/Zhou:Hucheng">Hucheng Zhou</na></co>
+</coauthors>
+</dblpperson>
