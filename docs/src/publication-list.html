@@ -1,0 +1,148 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/image-icons.html">
+<link rel="import" href="author-list.html">
+<link rel="import" href="shared-styles.html">
+
+</head><body><dom-module id="publication-list">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+
+      .icons {
+      }
+
+      .highlightAuthor {
+        font-weight: bold;
+      }
+
+      .title {
+        font-style: italic;
+      }
+
+      .table {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .header {
+        padding: 0.5em;
+        border-width: 2px 0 2px 0;
+        border-color: black;
+        border-style: solid;
+      }
+
+      .cell {
+        overflow: hidden;
+      }
+
+      .body {
+        padding:0.5em;
+      }
+
+      .cell1 {
+        flex-grow: 0;
+        width: 5%;
+      }
+
+      .cell2 {
+        flex-grow: 2;
+        width: 70%;
+      }
+
+      .cell3 {
+        flex-grow: 1;
+        width: 25%;
+      }
+
+      @media (max-width: 640px) {
+        .collapsed {
+          display: block;
+        }
+
+        .cell {
+          width: 100% !important;
+        }
+
+        .header {
+          border-style: none !important;
+        }
+
+        .optional {
+          display: none;
+        }
+      }
+    </style>
+
+    <div class="table collapsed">
+      <div class="cell optional cell1"><div class="header">#</div></div>
+      <div class="cell cell2"><div class="header">Publication</div></div>
+      <div class="cell cell3"><div class="header">Sources</div></div>
+
+      <template is="dom-repeat" items="[[publications]]">
+
+        <div class="cell optional cell1"><div class="body">[[_add(index, 1)]]</div></div>
+
+        <div class="cell cell2">
+          <div class="body">
+            <author-list authors="[[item.authors]]"></author-list>
+            <span class="title">[[item.title]]</span>
+            <span>[[item.booktitle]]</span>
+            <span>[[item.year]]</span>
+          </div>
+        </div>
+        
+        <div class="cell cell3">
+          <div class="body icons">
+            <a target="_blank" href="[[item.ee]]">DOI</a>
+            <template is="dom-if" if="[[item.preprint]]">
+              <a target="_blank" href="[[item.preprint]]"><paper-icon-button icon="icons:file-download"></paper-icon-button></a>
+            </template>
+            <template is="dom-if" if="[[item.presentation]]">
+              <a target="_blank" href="[[item.presentation]]"><paper-icon-button icon="image:slideshow"></paper-icon-button></a>
+            </template>
+          </div>
+        </div>
+
+      </template>
+    
+    </div>
+  </template>
+
+  <script>
+    class PublicationList extends Polymer.Element {
+      static get is() { return 'publication-list'; }
+
+      static get properties() {
+        return {
+          publications: {
+            type: Array,
+            value: [],
+          },
+        };
+      }
+
+      _add(i, j) {
+        return i + j;
+      }
+
+      _highlightAuthor(author) {
+        return author.indexOf('Nguyen') >= 0;
+      }
+
+      _separator(index, length) {
+        if (index == length - 1 || length == 1) {
+          return '.';
+        }
+        return ',';
+      }
+    }
+
+    window.customElements.define(PublicationList.is, PublicationList);
+  </script>
+</dom-module>
+</body></html>
