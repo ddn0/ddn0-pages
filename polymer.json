@@ -10,14 +10,14 @@
   "sources": [
     "src/**/*",
     "images/**/*",
-    "pdfs/**/*",
-    "bower.json"
+    "pdfs/**/*"
   ],
   "extraDependencies": [
     "browserconfig.xml",
     "data/**/*.json",
     "manifest.json",
-    "bower_components/webcomponentsjs/*.js"
+    "bower_components/webcomponentsjs/*.js",
+    "CNAME"
   ],
   "lint": {
     "rules": ["polymer-2"]
