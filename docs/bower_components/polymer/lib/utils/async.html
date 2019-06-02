@@ -6,40 +6,40 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><html><head><link rel="import" href="boot.html">
+--><link rel="import" href="boot.html">
 
-<script>
-(function() {
+<script>(function () {
+  'use strict'; // Microtask implemented using Mutation Observer
 
-  'use strict';
-
-  /** @typedef {{run: function(function(), number=):number, cancel: function(number)}} */
-  let AsyncInterface; // eslint-disable-line no-unused-vars
-
-  // Microtask implemented using Mutation Observer
   let microtaskCurrHandle = 0;
   let microtaskLastHandle = 0;
   let microtaskCallbacks = [];
   let microtaskNodeContent = 0;
   let microtaskNode = document.createTextNode('');
-  new window.MutationObserver(microtaskFlush).observe(microtaskNode, {characterData: true});
+  new window.MutationObserver(microtaskFlush).observe(microtaskNode, {
+    characterData: true
+  });
 
   function microtaskFlush() {
     const len = microtaskCallbacks.length;
+
     for (let i = 0; i < len; i++) {
       let cb = microtaskCallbacks[i];
+
       if (cb) {
         try {
           cb();
         } catch (e) {
-          setTimeout(() => { throw e });
+          setTimeout(() => {
+            throw e;
+          });
         }
       }
     }
+
     microtaskCallbacks.splice(0, len);
     microtaskLastHandle += len;
   }
-
   /**
    * Module that provides a number of strategies for enqueuing asynchronous
    * tasks.  Each sub-module provides a standard `run(fn)` interface that returns a
@@ -51,8 +51,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
    * @summary Module that provides a number of strategies for enqueuing asynchronous
    * tasks.
    */
-  Polymer.Async = {
 
+
+  Polymer.Async = {
     /**
      * Async interface wrapper around `setTimeout`.
      *
@@ -66,30 +67,45 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
        * delay.
        *
        * @memberof Polymer.Async.timeOut
-       * @param {number} delay Time to wait before calling callbacks in ms
-       * @return {AsyncInterface} An async timeout interface
+       * @param {number=} delay Time to wait before calling callbacks in ms
+       * @return {!AsyncInterface} An async timeout interface
        */
       after(delay) {
-        return  {
-          run(fn) { return setTimeout(fn, delay) },
-          cancel: window.clearTimeout.bind(window)
-        }
+        return {
+          run(fn) {
+            return window.setTimeout(fn, delay);
+          },
+
+          cancel(handle) {
+            window.clearTimeout(handle);
+          }
+
+        };
       },
+
       /**
        * Enqueues a function called in the next task.
        *
        * @memberof Polymer.Async.timeOut
-       * @param {Function} fn Callback to run
-       * @return {*} Handle used for canceling task
+       * @param {!Function} fn Callback to run
+       * @param {number=} delay Delay in milliseconds
+       * @return {number} Handle used for canceling task
        */
-      run: window.setTimeout.bind(window),
+      run(fn, delay) {
+        return window.setTimeout(fn, delay);
+      },
+
       /**
        * Cancels a previously enqueued `timeOut` callback.
        *
        * @memberof Polymer.Async.timeOut
-       * @param {*} handle Handle returned from `run` of callback to cancel
+       * @param {number} handle Handle returned from `run` of callback to cancel
+       * @return {void}
        */
-      cancel: window.clearTimeout.bind(window)
+      cancel(handle) {
+        window.clearTimeout(handle);
+      }
+
     },
 
     /**
@@ -103,18 +119,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       /**
        * Enqueues a function called at `requestAnimationFrame` timing.
        *
-       * @memberof Polymer.Async.timeOut
-       * @param {Function} fn Callback to run
-       * @return {*} Handle used for canceling task
+       * @memberof Polymer.Async.animationFrame
+       * @param {function(number):void} fn Callback to run
+       * @return {number} Handle used for canceling task
        */
-      run: window.requestAnimationFrame.bind(window),
+      run(fn) {
+        return window.requestAnimationFrame(fn);
+      },
+
       /**
        * Cancels a previously enqueued `animationFrame` callback.
        *
-       * @memberof Polymer.Async.timeOut
-       * @param {*} handle Handle returned from `run` of callback to cancel
+       * @memberof Polymer.Async.animationFrame
+       * @param {number} handle Handle returned from `run` of callback to cancel
+       * @return {void}
        */
-      cancel: window.cancelAnimationFrame.bind(window)
+      cancel(handle) {
+        window.cancelAnimationFrame(handle);
+      }
+
     },
 
     /**
@@ -129,30 +152,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       /**
        * Enqueues a function called at `requestIdleCallback` timing.
        *
-       * @memberof Polymer.Async.timeOut
-       * @param {Function} fn Callback to run
-       * @return {*} Handle used for canceling task
+       * @memberof Polymer.Async.idlePeriod
+       * @param {function(!IdleDeadline):void} fn Callback to run
+       * @return {number} Handle used for canceling task
        */
       run(fn) {
-        return window.requestIdleCallback ?
-          window.requestIdleCallback(fn) :
-          window.setTimeout(fn, 16);
+        return window.requestIdleCallback ? window.requestIdleCallback(fn) : window.setTimeout(fn, 16);
       },
+
       /**
        * Cancels a previously enqueued `idlePeriod` callback.
        *
-       * @memberof Polymer.Async.timeOut
-       * @param {*} handle Handle returned from `run` of callback to cancel
+       * @memberof Polymer.Async.idlePeriod
+       * @param {number} handle Handle returned from `run` of callback to cancel
+       * @return {void}
        */
-      cancel(timer) {
-        return window.cancelIdleCallback ?
-          window.cancelIdleCallback(timer) :
-          window.clearTimeout(timer);
+      cancel(handle) {
+        window.cancelIdleCallback ? window.cancelIdleCallback(handle) : window.clearTimeout(handle);
       }
+
     },
 
     /**
-     * Async interface for enqueueing callbacks that run at microtask timing.
+     * Async interface for enqueuing callbacks that run at microtask timing.
      *
      * Note that microtask timing is achieved via a single `MutationObserver`,
      * and thus callbacks enqueued with this API will all run in a single
@@ -162,16 +184,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      *
      * @namespace
      * @memberof Polymer.Async
-     * @summary Async interface for enqueueing callbacks that run at microtask
+     * @summary Async interface for enqueuing callbacks that run at microtask
      *   timing.
      */
     microTask: {
-
       /**
        * Enqueues a function called at microtask timing.
        *
-       * @memberof Polymer.Async.timeOut
-       * @param {Function} fn Callback to run
+       * @memberof Polymer.Async.microTask
+       * @param {!Function=} callback Callback to run
+       * @return {number} Handle used for canceling task
        */
       run(callback) {
         microtaskNode.textContent = microtaskNodeContent++;
@@ -182,21 +204,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       /**
        * Cancels a previously enqueued `microTask` callback.
        *
-       * @param {*} handle Handle returned from `run` of callback to cancel
+       * @memberof Polymer.Async.microTask
+       * @param {number} handle Handle returned from `run` of callback to cancel
+       * @return {void}
        */
       cancel(handle) {
         const idx = handle - microtaskLastHandle;
+
         if (idx >= 0) {
           if (!microtaskCallbacks[idx]) {
             throw new Error('invalid async handle: ' + handle);
           }
+
           microtaskCallbacks[idx] = null;
         }
       }
 
     }
   };
-
-})();
-</script>
-</head><body></body></html>
+})();</script>

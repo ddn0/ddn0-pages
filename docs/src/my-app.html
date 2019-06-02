@@ -6,7 +6,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><html><head><link rel="import" href="../bower_components/polymer/polymer-element.html">
+--><link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
 <link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
@@ -20,7 +20,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="my-icons.html">
 
-</head><body><dom-module id="my-app">
+<dom-module id="my-app">
   <template>
     <style>
       :host {
@@ -98,60 +98,52 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </app-drawer-layout>
   </template>
 
-  <script>
-    class MyApp extends Polymer.Element {
+  <script>class MyApp extends Polymer.Element {
+  static get is() {
+    return 'my-app';
+  }
 
-      static get is() { return 'my-app'; }
-
-      static get properties() {
-        return {
-          page: {
-            type: String,
-            reflectToAttribute: true,
-            observer: '_pageChanged',
-          },
-        };
+  static get properties() {
+    return {
+      page: {
+        type: String,
+        reflectToAttribute: true,
+        observer: '_pageChanged'
       }
+    };
+  }
 
-      static get observers() {
-        return [
-          '_routePageChanged(routeData.page)',
-        ];
-      }
+  static get observers() {
+    return ['_routePageChanged(routeData.page)'];
+  }
 
-      _routePageChanged(page) {
-        // Polymer 2.0 will call with `undefined` on initialization.
-        // Ignore until we are properly called with a string.
-        if (page === undefined) {
-          return;
-        }
+  _routePageChanged(page) {
+    // Polymer 2.0 will call with `undefined` on initialization.
+    // Ignore until we are properly called with a string.
+    if (page === undefined) {
+      return;
+    } // If no page was found in the route data, page will be an empty string.
+    // Deault to 'overview' in that case.
 
-        // If no page was found in the route data, page will be an empty string.
-        // Deault to 'overview' in that case.
-        this.page = page || 'overview';
 
-        // Close a non-persistent drawer when the page & route are changed.
-        if (!this.$.drawer.persistent) {
-          this.$.drawer.close();
-        }
-      }
+    this.page = page || 'overview'; // Close a non-persistent drawer when the page & route are changed.
 
-      _pageChanged(page) {
-        // Load page import on demand. Show 404 page if fails
-        var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
-        Polymer.importHref(
-            resolvedPageUrl,
-            null,
-            this._showPage404.bind(this),
-            true);
-      }
-
-      _showPage404() {
-        this.page = 'view404';
-      }
+    if (!this.$.drawer.persistent) {
+      this.$.drawer.close();
     }
+  }
 
-    window.customElements.define(MyApp.is, MyApp);
-  </script>
+  _pageChanged(page) {
+    // Load page import on demand. Show 404 page if fails
+    var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
+    Polymer.importHref(resolvedPageUrl, null, this._showPage404.bind(this), true);
+  }
+
+  _showPage404() {
+    this.page = 'view404';
+  }
+
+}
+
+window.customElements.define(MyApp.is, MyApp);</script>
 </dom-module>
-</body></html>

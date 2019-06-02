@@ -6,112 +6,108 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><html><head><link rel="import" href="../polymer/polymer.html">
+--><link rel="import" href="../polymer/polymer.html">
 
-<script>
+<script>/**
+ * @param {!Function} selectCallback
+ * @constructor
+ * @suppress {missingProvide}
+ */
+Polymer.IronSelection = function (selectCallback) {
+  this.selection = [];
+  this.selectCallback = selectCallback;
+};
+
+Polymer.IronSelection.prototype = {
+  /**
+   * Retrieves the selected item(s).
+   *
+   * @method get
+   * @returns Returns the selected item(s). If the multi property is true,
+   * `get` will return an array, otherwise it will return
+   * the selected item or undefined if there is no selection.
+   */
+  get: function () {
+    return this.multi ? this.selection.slice() : this.selection[0];
+  },
 
   /**
-   * @param {!Function} selectCallback
-   * @constructor
+   * Clears all the selection except the ones indicated.
+   *
+   * @method clear
+   * @param {Array} excludes items to be excluded.
    */
-  Polymer.IronSelection = function(selectCallback) {
-    this.selection = [];
-    this.selectCallback = selectCallback;
-  };
+  clear: function (excludes) {
+    this.selection.slice().forEach(function (item) {
+      if (!excludes || excludes.indexOf(item) < 0) {
+        this.setItemSelected(item, false);
+      }
+    }, this);
+  },
 
-  Polymer.IronSelection.prototype = {
+  /**
+   * Indicates if a given item is selected.
+   *
+   * @method isSelected
+   * @param {*} item The item whose selection state should be checked.
+   * @returns Returns true if `item` is selected.
+   */
+  isSelected: function (item) {
+    return this.selection.indexOf(item) >= 0;
+  },
 
-    /**
-     * Retrieves the selected item(s).
-     *
-     * @method get
-     * @returns Returns the selected item(s). If the multi property is true,
-     * `get` will return an array, otherwise it will return
-     * the selected item or undefined if there is no selection.
-     */
-    get: function() {
-      return this.multi ? this.selection.slice() : this.selection[0];
-    },
+  /**
+   * Sets the selection state for a given item to either selected or deselected.
+   *
+   * @method setItemSelected
+   * @param {*} item The item to select.
+   * @param {boolean} isSelected True for selected, false for deselected.
+   */
+  setItemSelected: function (item, isSelected) {
+    if (item != null) {
+      if (isSelected !== this.isSelected(item)) {
+        // proceed to update selection only if requested state differs from current
+        if (isSelected) {
+          this.selection.push(item);
+        } else {
+          var i = this.selection.indexOf(item);
 
-    /**
-     * Clears all the selection except the ones indicated.
-     *
-     * @method clear
-     * @param {Array} excludes items to be excluded.
-     */
-    clear: function(excludes) {
-      this.selection.slice().forEach(function(item) {
-        if (!excludes || excludes.indexOf(item) < 0) {
-          this.setItemSelected(item, false);
-        }
-      }, this);
-    },
-
-    /**
-     * Indicates if a given item is selected.
-     *
-     * @method isSelected
-     * @param {*} item The item whose selection state should be checked.
-     * @returns Returns true if `item` is selected.
-     */
-    isSelected: function(item) {
-      return this.selection.indexOf(item) >= 0;
-    },
-
-    /**
-     * Sets the selection state for a given item to either selected or deselected.
-     *
-     * @method setItemSelected
-     * @param {*} item The item to select.
-     * @param {boolean} isSelected True for selected, false for deselected.
-     */
-    setItemSelected: function(item, isSelected) {
-      if (item != null) {
-        if (isSelected !== this.isSelected(item)) {
-          // proceed to update selection only if requested state differs from current
-          if (isSelected) {
-            this.selection.push(item);
-          } else {
-            var i = this.selection.indexOf(item);
-            if (i >= 0) {
-              this.selection.splice(i, 1);
-            }
-          }
-          if (this.selectCallback) {
-            this.selectCallback(item, isSelected);
+          if (i >= 0) {
+            this.selection.splice(i, 1);
           }
         }
-      }
-    },
 
-    /**
-     * Sets the selection state for a given item. If the `multi` property
-     * is true, then the selected state of `item` will be toggled; otherwise
-     * the `item` will be selected.
-     *
-     * @method select
-     * @param {*} item The item to select.
-     */
-    select: function(item) {
-      if (this.multi) {
-        this.toggle(item);
-      } else if (this.get() !== item) {
-        this.setItemSelected(this.get(), false);
-        this.setItemSelected(item, true);
+        if (this.selectCallback) {
+          this.selectCallback(item, isSelected);
+        }
       }
-    },
-
-    /**
-     * Toggles the selection state for `item`.
-     *
-     * @method toggle
-     * @param {*} item The item to toggle.
-     */
-    toggle: function(item) {
-      this.setItemSelected(item, !this.isSelected(item));
     }
+  },
 
-  };
+  /**
+   * Sets the selection state for a given item. If the `multi` property
+   * is true, then the selected state of `item` will be toggled; otherwise
+   * the `item` will be selected.
+   *
+   * @method select
+   * @param {*} item The item to select.
+   */
+  select: function (item) {
+    if (this.multi) {
+      this.toggle(item);
+    } else if (this.get() !== item) {
+      this.setItemSelected(this.get(), false);
+      this.setItemSelected(item, true);
+    }
+  },
 
-</script>
-</head><body></body></html>
+  /**
+   * Toggles the selection state for `item`.
+   *
+   * @method toggle
+   * @param {*} item The item to toggle.
+   */
+  toggle: function (item) {
+    this.setItemSelected(item, !this.isSelected(item));
+  }
+};</script>

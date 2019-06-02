@@ -1,6 +1,6 @@
-<html><head><link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
 
-</head><body><dom-module id="author-list">
+<dom-module id="author-list">
   <template>
     <style>
       :host {
@@ -22,32 +22,33 @@
     </template>
   </template>
 
-  <script>
-    class AuthorList extends Polymer.Element {
-      static get is() { return 'author-list'; }
+  <script>class AuthorList extends Polymer.Element {
+  static get is() {
+    return 'author-list';
+  }
 
-      static get properties() {
-        return {
-          authors: {
-            type: Array,
-            value: [],
-          },
-        };
+  static get properties() {
+    return {
+      authors: {
+        type: Array,
+        value: []
       }
+    };
+  }
 
-      _highlightAuthor(author) {
-        return author.indexOf('Nguyen') >= 0;
-      }
+  _highlightAuthor(author) {
+    return author.indexOf('Nguyen') >= 0;
+  }
 
-      _separator(index) {
-        if (index == this.authors.length - 1 || this.authors.length == 1) {
-          return '.';
-        }
-        return ',';
-      }
+  _separator(index) {
+    if (index == this.authors.length - 1 || this.authors.length == 1) {
+      return '.';
     }
 
-    window.customElements.define(AuthorList.is, AuthorList);
-  </script>
+    return ',';
+  }
+
+}
+
+window.customElements.define(AuthorList.is, AuthorList);</script>
 </dom-module>
-</body></html>

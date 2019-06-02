@@ -6,10 +6,10 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><html><head><link rel="import" href="../polymer/polymer.html">
+--><link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../paper-behaviors/paper-button-behavior.html">
-<link rel="import" href="../paper-styles/element-styles/paper-material.html">
+<link rel="import" href="../paper-styles/element-styles/paper-material-styles.html">
 
 <!--
 Material design: [Buttons](https://www.google.com/design/spec/components/buttons.html)
@@ -79,9 +79,9 @@ Custom property | Description | Default
 @demo demo/index.html
 -->
 
-</head><body><dom-module id="paper-button">
+<dom-module id="paper-button">
   <template strip-whitespace="">
-    <style include="paper-material">
+    <style include="paper-material-styles">
       /* Need to specify the same specificity as the styles imported from paper-material. */
       :host {
         @apply --layout-inline;
@@ -104,7 +104,7 @@ Custom property | Description | Default
         cursor: pointer;
         z-index: 0;
         padding: 0.7em 0.57em;
-        
+
         @apply --paper-font-common-base;
         @apply --paper-button;
       }
@@ -144,7 +144,7 @@ Custom property | Description | Default
       }
 
       :host([disabled]) {
-        background: #eaeaea;
+        background: none;
         color: #a8a8a8;
         cursor: auto;
         pointer-events: none;
@@ -152,6 +152,10 @@ Custom property | Description | Default
         @apply --paper-button-disabled;
       }
 
+      :host([disabled][raised]) {
+        background: #eaeaea;
+      }
+        
       :host([animated]) {
         @apply --shadow-transition;
       }
@@ -164,43 +168,34 @@ Custom property | Description | Default
     <slot></slot>
   </template>
 
-  <script>
-    Polymer({
-      is: 'paper-button',
+  <script>Polymer({
+  is: 'paper-button',
+  behaviors: [Polymer.PaperButtonBehavior],
+  properties: {
+    /**
+     * If true, the button should be styled with a shadow.
+     */
+    raised: {
+      type: Boolean,
+      reflectToAttribute: true,
+      value: false,
+      observer: '_calculateElevation'
+    }
+  },
+  _calculateElevation: function () {
+    if (!this.raised) {
+      this._setElevation(0);
+    } else {
+      Polymer.PaperButtonBehaviorImpl._calculateElevation.apply(this);
+    }
+  }
+  /**
+  Fired when the animation finishes.
+  This is useful if you want to wait until
+  the ripple animation finishes to perform some action.
+   @event transitionend
+  Event param: {{node: Object}} detail Contains the animated node.
+  */
 
-      behaviors: [
-        Polymer.PaperButtonBehavior
-      ],
-
-      properties: {
-        /**
-         * If true, the button should be styled with a shadow.
-         */
-        raised: {
-          type: Boolean,
-          reflectToAttribute: true,
-          value: false,
-          observer: '_calculateElevation'
-        }
-      },
-
-      _calculateElevation: function() {
-        if (!this.raised) {
-          this._setElevation(0);
-        } else {
-          Polymer.PaperButtonBehaviorImpl._calculateElevation.apply(this);
-        }
-      }
-
-      /**
-      Fired when the animation finishes.
-      This is useful if you want to wait until
-      the ripple animation finishes to perform some action.
-
-      @event transitionend
-      Event param: {{node: Object}} detail Contains the animated node.
-      */
-    });
-  </script>
+});</script>
 </dom-module>
-</body></html>

@@ -37,8 +37,8 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/bower_components/app-layout/app-drawer-layout/app-drawer-layout.html","8c0b647db4d25a3a2e95e6e4e24bb221"],["/bower_components/app-layout/app-drawer/app-drawer.html","1163bb1aa96ea301ff061225afa549b2"],["/bower_components/app-layout/app-header-layout/app-header-layout.html","3a1f94051e68b0b8fcd6c484cb6ea224"],["/bower_components/app-layout/app-header/app-header.html","be5b5895f4d6bfc49446c2df40689395"],["/bower_components/app-layout/app-layout-behavior/app-layout-behavior.html","0c1cf447170ee584c2e4cda88e8ed53a"],["/bower_components/app-layout/app-scroll-effects/app-scroll-effects-behavior.html","fc72538a2ea03edaf275238a97b21bc8"],["/bower_components/app-layout/app-scroll-effects/app-scroll-effects.html","334eac7f54a828baedbe8f09574571b7"],["/bower_components/app-layout/app-scroll-effects/effects/blend-background.html","53ab90982adbe7457d8603d722c98d2f"],["/bower_components/app-layout/app-scroll-effects/effects/fade-background.html","593bd7855bcc277f33e8c256c45ef039"],["/bower_components/app-layout/app-scroll-effects/effects/material.html","09fc23898ebd40bf11160760df03de86"],["/bower_components/app-layout/app-scroll-effects/effects/parallax-background.html","d50c47e6d50fe8a33e65d10a9c189684"],["/bower_components/app-layout/app-scroll-effects/effects/resize-snapped-title.html","a9dcfcb21b7af4dbe25d8ca6d8099463"],["/bower_components/app-layout/app-scroll-effects/effects/resize-title.html","572428f1f51fd78b90c1e867e9cb33c4"],["/bower_components/app-layout/app-scroll-effects/effects/waterfall.html","0d19840e1b4112985dacaf8a99513abe"],["/bower_components/app-layout/app-toolbar/app-toolbar.html","97861d12dd6dd8874e74a4a7fe085710"],["/bower_components/app-layout/helpers/helpers.html","cdd968e67df0b732f9d47057af41e73f"],["/bower_components/app-route/app-location.html","734b06f3c15a9df75277d372f746694b"],["/bower_components/app-route/app-route-converter-behavior.html","5ed794fad917e6c6cae8ecc2da6a1840"],["/bower_components/app-route/app-route.html","7e0b3dc18212e19edfadfb43aba5687a"],["/bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html","26309806bc5a08dab92ec43a33bf85ad"],["/bower_components/iron-ajax/iron-ajax.html","1ae452371ec90c327487034e6d4acae1"],["/bower_components/iron-ajax/iron-request.html","12eca57ec63912a505d6c455d360614e"],["/bower_components/iron-behaviors/iron-button-state.html","477c03ed546186de581ee1b2495bef3f"],["/bower_components/iron-behaviors/iron-control-state.html","d8caf1bf4afc8ef52625109d57a7f540"],["/bower_components/iron-flex-layout/iron-flex-layout.html","bfb5f3486f020afa5f289f3b22398c34"],["/bower_components/iron-icon/iron-icon.html","fef9331d08a730357652773c88676452"],["/bower_components/iron-icons/image-icons.html","88718ecb8e6a153b45edd9218c5b3176"],["/bower_components/iron-icons/iron-icons.html","263c425f0e794d1e2fd636f8039a8586"],["/bower_components/iron-iconset-svg/iron-iconset-svg.html","7f43f3963b39b325898703673a3d2f53"],["/bower_components/iron-location/iron-location.html","5b866ad0574359d468864fc666817ed6"],["/bower_components/iron-location/iron-query-params.html","5e10cc028701b213de7790f68a3140c6"],["/bower_components/iron-media-query/iron-media-query.html","81acb2abcf1ad3a7636fce5c43f0fcb5"],["/bower_components/iron-meta/iron-meta.html","706d2c47bdd19b3dc9e041db7098af93"],["/bower_components/iron-pages/iron-pages.html","0bcbc3ee4469ff26099a1ab1066afca0"],["/bower_components/iron-resizable-behavior/iron-resizable-behavior.html","e22494690a6d3affa8dbb051c4822641"],["/bower_components/iron-scroll-target-behavior/iron-scroll-target-behavior.html","aa108ab483825128d97a10a609f9e3c8"],["/bower_components/iron-selector/iron-multi-selectable.html","af7e6902c67bec0736d3ac021788afe4"],["/bower_components/iron-selector/iron-selectable.html","669e25a181cde3b8d3e3411627bfa7f2"],["/bower_components/iron-selector/iron-selection.html","3343a653dfada7e893aad0571ceb946d"],["/bower_components/iron-selector/iron-selector.html","eaec85c290f2dfa24f778a676bf56e15"],["/bower_components/paper-behaviors/paper-button-behavior.html","1b832001d3a6001ddeb2380e4b5bee47"],["/bower_components/paper-behaviors/paper-inky-focus-behavior.html","07276537aed6235c4126ff8f2f38db6a"],["/bower_components/paper-behaviors/paper-ripple-behavior.html","26f84434724812da0631633cdd54676e"],["/bower_components/paper-button/paper-button.html","a320677d790ef9662f3ccda1fe77d87b"],["/bower_components/paper-icon-button/paper-icon-button.html","bfadf4611f2104d816b43ba254460c7c"],["/bower_components/paper-ripple/paper-ripple.html","a538684da4f217d83cfd66cfc4eada62"],["/bower_components/paper-styles/color.html","e3e3c43a7fa75c3a2f8a395ae8fd490d"],["/bower_components/paper-styles/default-theme.html","ed4df18f1171d7793508d645054335b8"],["/bower_components/paper-styles/element-styles/paper-material.html","f0f83e3976975d607e326f44e83d1217"],["/bower_components/paper-styles/shadow.html","4123860d1a9035b047714385f21f368f"],["/bower_components/polymer/lib/elements/array-selector.html","3c6b2faa0fc3fb3213d38d2c99d5e23f"],["/bower_components/polymer/lib/elements/custom-style.html","5f3b28865d7f8a469ee745438f6eb8d9"],["/bower_components/polymer/lib/elements/dom-bind.html","e01b19f292f91c546c36dd5ce7d82f39"],["/bower_components/polymer/lib/elements/dom-if.html","847fb578e0b1f7c3947dba2736029da8"],["/bower_components/polymer/lib/elements/dom-module.html","7c5f90016ba36ee95561a57d405b6b96"],["/bower_components/polymer/lib/elements/dom-repeat.html","c2c4905e244f79585bd3a6a4f2e6a4eb"],["/bower_components/polymer/lib/legacy/class.html","2f0858bb93493dac53f5a1ba85ba12df"],["/bower_components/polymer/lib/legacy/legacy-element-mixin.html","ab170011ed657984625af1460143c10b"],["/bower_components/polymer/lib/legacy/mutable-data-behavior.html","bb4f75ba9c1cdc662c30ac2dcab6866f"],["/bower_components/polymer/lib/legacy/polymer-fn.html","69a632ca8a1d22137d8cdd19c0841b02"],["/bower_components/polymer/lib/legacy/polymer.dom.html","e3f165bcf2d187874fe0d66c61b51b4c"],["/bower_components/polymer/lib/legacy/templatizer-behavior.html","4b05abec9b19213ac3f19e7dc95086f4"],["/bower_components/polymer/lib/mixins/element-mixin.html","cf129666d3465e8b03618b67bd8db0ff"],["/bower_components/polymer/lib/mixins/gesture-event-listeners.html","e969366e367a734ef6695125d6782c38"],["/bower_components/polymer/lib/mixins/mutable-data.html","3654cbe785028abee5e7129f051547a9"],["/bower_components/polymer/lib/mixins/property-accessors.html","ae2bbf262109d9a48b89eb20bef6fb57"],["/bower_components/polymer/lib/mixins/property-effects.html","c1486221bbd9642e382c821aed46091a"],["/bower_components/polymer/lib/mixins/template-stamp.html","f559def11fbc603e3b3b1e73d68ada98"],["/bower_components/polymer/lib/utils/array-splice.html","7a80bca520c3f5a054c1c4577f51182c"],["/bower_components/polymer/lib/utils/async.html","63f34f2f19f465262ed75f98b5b008c3"],["/bower_components/polymer/lib/utils/boot.html","514f334a8b77eb9fb9ff20ce80a1167e"],["/bower_components/polymer/lib/utils/case-map.html","397d495f3eb392b59a65dfee0421b305"],["/bower_components/polymer/lib/utils/debounce.html","f1866fc98fa520288f4001a5c3d0b50b"],["/bower_components/polymer/lib/utils/flattened-nodes-observer.html","64b37ed9fae48a40dd86c27f89bbe400"],["/bower_components/polymer/lib/utils/flush.html","5e9e55d5e5d7d88bfe3073f4536331ea"],["/bower_components/polymer/lib/utils/gestures.html","f5e1a6ab1019718276d8372d7c510b86"],["/bower_components/polymer/lib/utils/import-href.html","de2edb660b88a3f2f8b6927ee403fd6a"],["/bower_components/polymer/lib/utils/mixin.html","4859fa08b603a555f81cfe7ce3e5db95"],["/bower_components/polymer/lib/utils/path.html","f09edb0bf2e7333a3d7ba33fe0984d6b"],["/bower_components/polymer/lib/utils/render-status.html","747bfdf7272d49de08399cc4ebea8493"],["/bower_components/polymer/lib/utils/resolve-url.html","15810a3ba447c460502e9cf7f04b64b5"],["/bower_components/polymer/lib/utils/style-gather.html","595515fcdf8cf59afba1d67d94a9deba"],["/bower_components/polymer/lib/utils/templatize.html","0933b113ad1c10fed71681dd876a2a13"],["/bower_components/polymer/lib/utils/unresolved.html","bea349c4a71e9f4327da774afd73f8ae"],["/bower_components/polymer/polymer-element.html","54c861005cf028b03abab90e8de6221f"],["/bower_components/polymer/polymer.html","edc45d69a352ab2bcb32048524c02573"],["/bower_components/shadycss/apply-shim.html","a7855a6be7cd2ceab940f13c1afba1f3"],["/bower_components/shadycss/apply-shim.min.js","6b47e16c654d1686c4c8359a98a16045"],["/bower_components/shadycss/custom-style-interface.html","7784f566f143bec28bf67b864bedf658"],["/bower_components/shadycss/custom-style-interface.min.js","3d87ce64588ea9a73f62dbe8d75990ce"],["/bower_components/webcomponentsjs/custom-elements-es5-adapter.js","76bf14c68e996daeddf9d8ec2ee46edb"],["/bower_components/webcomponentsjs/gulpfile.js","5b9593e6c3a2a87a866c1169114c745e"],["/bower_components/webcomponentsjs/webcomponents-hi-ce.js","46f55471a5ad6893cd8115e5663b875e"],["/bower_components/webcomponentsjs/webcomponents-hi-sd-ce.js","e300de0202a6cc8b9759c080575d93fa"],["/bower_components/webcomponentsjs/webcomponents-hi.js","497996949b601c43ba5bfe979f4ffb4b"],["/bower_components/webcomponentsjs/webcomponents-lite.js","c99c738af384279692c6438c764ccf65"],["/bower_components/webcomponentsjs/webcomponents-loader.js","8d3e67f553c1ae91569e16e2cc80b616"],["/bower_components/webcomponentsjs/webcomponents-sd-ce.js","e21cf49f5bd36dcf777db42570df5326"],["/index.html","3191ae36c54b17f506704eb2e3bc6210"],["/manifest.json","405f0aaf6ed3a93688109735926c04a1"],["/src/author-list.html","8588a145d0db429e97eb578e01c48299"],["/src/my-app.html","e7c0796430a27faf2fa97d1420b1ba25"],["/src/my-details.html","f830c9324f09a020350203275c83bb0f"],["/src/my-icons.html","46a164b81d130beeec8b4409481eed8c"],["/src/my-overview.html","203edf1d7ec26e55917171d74073375f"],["/src/my-publications.html","a70fb9f4aafc258ea3ccc573c38fdf22"],["/src/my-view404.html","bba808c44ca2eb972c7c166d804e464d"],["/src/publication-list.html","51173628d7f9752f823b278e108a829e"],["/src/shared-styles.html","b7f65eebef9653bd7b45702f231cb98e"]];
-var cacheName = 'sw-precache-v2--' + (self.registration ? self.registration.scope : '');
+var precacheConfig = [["bower_components/app-layout/app-drawer-layout/app-drawer-layout.html","d0b572e31944b9396d11426887d799ae"],["bower_components/app-layout/app-drawer/app-drawer.html","edb12d9e17c61053022154cfb186a1af"],["bower_components/app-layout/app-header-layout/app-header-layout.html","b1672e816c86be4d3430466792793076"],["bower_components/app-layout/app-header/app-header.html","0839e3fe45dc03b7ec82a3ff994f9999"],["bower_components/app-layout/app-layout-behavior/app-layout-behavior.html","ed3e4c1b26f0c346516d986d32b8293e"],["bower_components/app-layout/app-scroll-effects/app-scroll-effects-behavior.html","490b917b75be97cfb6d00b4f265c0a8f"],["bower_components/app-layout/app-scroll-effects/app-scroll-effects.html","f9af3b19ba0df5aea027b835f0d4e766"],["bower_components/app-layout/app-scroll-effects/effects/blend-background.html","a03d3b8b36ed563d95de1d216a4f95c1"],["bower_components/app-layout/app-scroll-effects/effects/fade-background.html","56e9ae0ae405d591797ff358b40fe0ec"],["bower_components/app-layout/app-scroll-effects/effects/material.html","71f0901390d66a79c2064a9ad1fd2ab9"],["bower_components/app-layout/app-scroll-effects/effects/parallax-background.html","bfe6b7317a221e6babe303b8d7e8b514"],["bower_components/app-layout/app-scroll-effects/effects/resize-snapped-title.html","f844cb0e86aaa492f9434a9c659627e5"],["bower_components/app-layout/app-scroll-effects/effects/resize-title.html","b478b69e3b017981a15231d27cfb3d93"],["bower_components/app-layout/app-scroll-effects/effects/waterfall.html","2d139b7154665bbd45e3b60cc0055d94"],["bower_components/app-layout/app-toolbar/app-toolbar.html","f2dedc637dcf2f0c143dd49f34c69351"],["bower_components/app-layout/helpers/helpers.html","83fd30d1f6a521655e29f9d418873d18"],["bower_components/app-route/app-location.html","1fa84168285fdab6d7167f7f24f74125"],["bower_components/app-route/app-route-converter-behavior.html","1109e78e524ae215a0fe16164fca1898"],["bower_components/app-route/app-route.html","ebd95bb1412bb7b2909f5ef6c5a16c8a"],["bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html","b216ddf5b140814ac9d79031789de423"],["bower_components/iron-ajax/iron-ajax.html","9252ad906bc08605f9e46e5404d49c2b"],["bower_components/iron-ajax/iron-request.html","cbe67ba0d6274a558cd8196f2f9a5b07"],["bower_components/iron-behaviors/iron-button-state.html","2ee8b97f0dc42f816c3982c7464fa346"],["bower_components/iron-behaviors/iron-control-state.html","6143543da11673e4e614959df7ca57d4"],["bower_components/iron-flex-layout/iron-flex-layout.html","b8aa79f9be851cf7ecc5a6f8c2c09d98"],["bower_components/iron-icon/iron-icon.html","babd845aa065081571fc871e905fa820"],["bower_components/iron-icons/image-icons.html","56aeefb5517b2cf02ae016cb53c9358f"],["bower_components/iron-icons/iron-icons.html","b06b48bbd24e44ce5f592c008e254376"],["bower_components/iron-iconset-svg/iron-iconset-svg.html","1e3330da11aec0da63e866bf90f776c8"],["bower_components/iron-location/iron-location.html","3d1d1640f117543269575c7c1c9de85a"],["bower_components/iron-location/iron-query-params.html","2ce94815f8f8f1630d71d77e2f566802"],["bower_components/iron-media-query/iron-media-query.html","7d3f43a96df98d79d2adf3124e8222a8"],["bower_components/iron-meta/iron-meta.html","b00996d776a98c7e895b4511609267e3"],["bower_components/iron-pages/iron-pages.html","c29a9f80bbef253c80723dc6d8bb596b"],["bower_components/iron-resizable-behavior/iron-resizable-behavior.html","28388bfc5987e454df94cda48ece6e40"],["bower_components/iron-scroll-target-behavior/iron-scroll-target-behavior.html","b17bc4995cce01c10aef6795a65fb184"],["bower_components/iron-selector/iron-multi-selectable.html","2f18affc118443f511f179bbe7960b6a"],["bower_components/iron-selector/iron-selectable.html","8f5da0b830e2603ff8e8ff205299a203"],["bower_components/iron-selector/iron-selection.html","2226092899e54f12b29675a185fa5514"],["bower_components/iron-selector/iron-selector.html","7efc0c12ff2e8e0c4c31e292260ea200"],["bower_components/paper-behaviors/paper-button-behavior.html","a0b4157e2a9b7f45a364d3c6601b358e"],["bower_components/paper-behaviors/paper-inky-focus-behavior.html","4c05d6417c14adaa64a7be4603380413"],["bower_components/paper-behaviors/paper-ripple-behavior.html","6a6b928ccf33c4dd4e290de99bd4e733"],["bower_components/paper-button/paper-button.html","254e644921fa8c910072f7116d5cb07f"],["bower_components/paper-icon-button/paper-icon-button.html","3b68ae2d0bf8c26c8b125cfe8c34c7c2"],["bower_components/paper-ripple/paper-ripple.html","8853b9cea48cfefe4336fb8d6a888d05"],["bower_components/paper-styles/color.html","2b6b926e5bd4005bdbdcd15a34a50b95"],["bower_components/paper-styles/default-theme.html","9480969fcd665e90201b506a4737fa1a"],["bower_components/paper-styles/element-styles/paper-material-styles.html","b0a38bd2eb6f4c4844d4903a46268c92"],["bower_components/paper-styles/shadow.html","2fbe595f966eebe419b9b91611d6392a"],["bower_components/polymer/lib/elements/array-selector.html","d9ce72915fcd94e045f37fd69005d60f"],["bower_components/polymer/lib/elements/custom-style.html","1d6da5c8ed6be4885e745d3b6fd7b5ff"],["bower_components/polymer/lib/elements/dom-bind.html","1fd682ef71950fda93b9dfc30a07b38f"],["bower_components/polymer/lib/elements/dom-if.html","8c56ac417a990db1e7730ab94e05eefc"],["bower_components/polymer/lib/elements/dom-module.html","7abaf87e66987f4cf7266718f3f449b4"],["bower_components/polymer/lib/elements/dom-repeat.html","3f58ba1b527d669b7087e402615f3f69"],["bower_components/polymer/lib/legacy/class.html","06a9a03cc96a12e387b0af643b1a5840"],["bower_components/polymer/lib/legacy/legacy-element-mixin.html","9884cf46cebe8afdf5a49ecbe50afd50"],["bower_components/polymer/lib/legacy/mutable-data-behavior.html","4df2a7f7803d35928f5e740e85443ece"],["bower_components/polymer/lib/legacy/polymer-fn.html","daea28b40e0edb539f4903526568e2bc"],["bower_components/polymer/lib/legacy/polymer.dom.html","7c7468013e34a852a894e9a3f8ba749f"],["bower_components/polymer/lib/legacy/templatizer-behavior.html","ca634ed594d10511c96db0ab26fe4ef3"],["bower_components/polymer/lib/mixins/dir-mixin.html","c9f3dfd9e36b3caa0d8ca3f96c1f9a7b"],["bower_components/polymer/lib/mixins/element-mixin.html","5a8f6663997b0d50fa494f3ac3bfb1ea"],["bower_components/polymer/lib/mixins/gesture-event-listeners.html","1f390af97c2ea2f0647980233e736fdf"],["bower_components/polymer/lib/mixins/mutable-data.html","e14f55be95ffcbb6f0ef9e4a953ac139"],["bower_components/polymer/lib/mixins/properties-changed.html","39ac9a047aaabec04df1cee4183751f8"],["bower_components/polymer/lib/mixins/properties-mixin.html","bb620562a64b50655b0961e7c1e07832"],["bower_components/polymer/lib/mixins/property-accessors.html","f7dd48e5151e76373febeaeee327f0fd"],["bower_components/polymer/lib/mixins/property-effects.html","9303c1345decd532ad4737c1f58562c8"],["bower_components/polymer/lib/mixins/template-stamp.html","bff4f0ae4042b7c0b24b23a8f789a9c1"],["bower_components/polymer/lib/utils/array-splice.html","af45213e9722ac2cff72b3da989b2d35"],["bower_components/polymer/lib/utils/async.html","c8c04ca11c20e296606c0c8b5fb09ea5"],["bower_components/polymer/lib/utils/boot.html","3b2d72eede425a5eb274f75c3eb6c24d"],["bower_components/polymer/lib/utils/case-map.html","a563011a2a9fed423f186d9162c6094e"],["bower_components/polymer/lib/utils/debounce.html","6884bbcd273c9b1dae5f2248d7752568"],["bower_components/polymer/lib/utils/flattened-nodes-observer.html","7e203246cf48da2784a29e970d43482a"],["bower_components/polymer/lib/utils/flush.html","0940b6dbab4ce60dc9185a3a13fab2e4"],["bower_components/polymer/lib/utils/gestures.html","344ac4b2d9ec8624ee42ad96432cd659"],["bower_components/polymer/lib/utils/html-tag.html","40b52607129959875fd9c5758c89bf4c"],["bower_components/polymer/lib/utils/import-href.html","e044c6fe4562d8a74b95d5a1a4aa3c02"],["bower_components/polymer/lib/utils/mixin.html","32aefbbfe727cd8c8c88c03a23526e92"],["bower_components/polymer/lib/utils/path.html","009e390d6f45dda28859e3fa90216e89"],["bower_components/polymer/lib/utils/render-status.html","ef95ca0eec4a9f8ed210830b6a367cec"],["bower_components/polymer/lib/utils/resolve-url.html","6bac182b4ac9ca300fe99ead2bc2ce23"],["bower_components/polymer/lib/utils/settings.html","100af3fad58f4e01a293ca3ef844d21f"],["bower_components/polymer/lib/utils/style-gather.html","a0267c1f749ae6fa8e376b6b8768dd98"],["bower_components/polymer/lib/utils/telemetry.html","432c30b36993464c5029d66cd6d1a73a"],["bower_components/polymer/lib/utils/templatize.html","f9f67905c19ff7aebca4cd2c8f943711"],["bower_components/polymer/lib/utils/unresolved.html","0db19a736bfeca0ea0a265784fdbc45a"],["bower_components/polymer/polymer-element.html","e46b3b3f39daa9b47ffe3c1cb86606b2"],["bower_components/polymer/polymer.html","b8d6e0b7108b5487c5056745d4260fee"],["bower_components/shadycss/apply-shim.html","f220299c2be1b5040111843d640b70a5"],["bower_components/shadycss/apply-shim.min.js","2f10de5f53752d98aca8bb0b50fb7214"],["bower_components/shadycss/custom-style-interface.html","0a68ea0f3af7bcb1ca6617e512f720cb"],["bower_components/shadycss/custom-style-interface.min.js","63c1d4edf7ea436dc9eb408ef6a7a24b"],["bower_components/webcomponentsjs/custom-elements-es5-adapter.js","8af5f1900788253d8384715a01425ab7"],["bower_components/webcomponentsjs/gulpfile.js","d62de2e3466a2ebfebb7c463a724f50d"],["bower_components/webcomponentsjs/webcomponents-ce.js","79018f7fe2788095460a82dad1d0e2d9"],["bower_components/webcomponentsjs/webcomponents-hi-ce.js","ceb979b7d4c089b9daa38eec743a3915"],["bower_components/webcomponentsjs/webcomponents-hi-sd-ce.js","4cc6fe042af14bded21af71ccb137f45"],["bower_components/webcomponentsjs/webcomponents-hi-sd.js","8631268c8fb731636ddf410293155f89"],["bower_components/webcomponentsjs/webcomponents-hi.js","2e02d950c1c199919a375acfd1fbc108"],["bower_components/webcomponentsjs/webcomponents-lite.js","e6a9f166ed6b16c555bd020782780db5"],["bower_components/webcomponentsjs/webcomponents-loader.js","596ad3dc06dfb78ecdc6bcee1d653f04"],["bower_components/webcomponentsjs/webcomponents-sd-ce.js","0ae8ee0bf172ca9bcbc04f1bfea15fe4"],["bower_components/webcomponentsjs/webcomponents-sd.js","221ef1c37f786b0f26f5e94e53276d20"],["index.html","7d9354c0ab241ee28114b3bf0a55e167"],["manifest.json","405f0aaf6ed3a93688109735926c04a1"],["src/author-list.html","fb5f45e08073f6e3284d104cb945f136"],["src/my-app.html","26cc150db6f73a9849d6928138259055"],["src/my-details.html","6c37fee98ce5bd66a04a0067c036266d"],["src/my-icons.html","5bbb6a8d595f50a22a73679d68a2304c"],["src/my-overview.html","40d1fc4d06bc2511a81f848664ab5a5e"],["src/my-publications.html","716eda6ff45251fea70d5cce3b178a38"],["src/my-view404.html","eb5559920464a5fa706874086f68c150"],["src/publication-list.html","34426e8213b1d0929fb020fd5bd06c9a"],["src/shared-styles.html","3308987250f3ccd7f135d698cfd289cf"]];
+var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 
 var ignoreUrlParametersMatching = [/^utm_/];
@@ -53,6 +53,28 @@ var addDirectoryIndex = function (originalUrl, index) {
     return url.toString();
   };
 
+var cleanResponse = function (originalResponse) {
+    // If this is not a redirected response, then we don't have to do anything.
+    if (!originalResponse.redirected) {
+      return Promise.resolve(originalResponse);
+    }
+
+    // Firefox 50 and below doesn't support the Response.body stream, so we may
+    // need to read the entire body to memory as a Blob.
+    var bodyPromise = 'body' in originalResponse ?
+      Promise.resolve(originalResponse.body) :
+      originalResponse.blob();
+
+    return bodyPromise.then(function (body) {
+      // new Response() is happy when passed either a stream or a Blob.
+      return new Response(body, {
+        headers: originalResponse.headers,
+        status: originalResponse.status,
+        statusText: originalResponse.statusText
+      });
+    });
+  };
+
 var createCacheKey = function (originalUrl, paramName, paramValue,
                            dontCacheBustUrlsMatching) {
     // Create a new URL object to avoid modifying originalUrl.
@@ -61,7 +83,7 @@ var createCacheKey = function (originalUrl, paramName, paramValue,
     // If dontCacheBustUrlsMatching is not set, or if we don't have a match,
     // then add in the extra cache-busting URL parameter.
     if (!dontCacheBustUrlsMatching ||
-        !(url.toString().match(dontCacheBustUrlsMatching))) {
+        !(url.pathname.match(dontCacheBustUrlsMatching))) {
       url.search += (url.search ? '&' : '') +
         encodeURIComponent(paramName) + '=' + encodeURIComponent(paramValue);
     }
@@ -77,7 +99,7 @@ var isPathWhitelisted = function (whitelist, absoluteUrlString) {
 
     // Otherwise compare each path regex to the path of the URL passed in.
     var path = (new URL(absoluteUrlString)).pathname;
-    return whitelist.some(function(whitelistedPathRegex) {
+    return whitelist.some(function (whitelistedPathRegex) {
       return path.match(whitelistedPathRegex);
     });
   };
@@ -85,18 +107,20 @@ var isPathWhitelisted = function (whitelist, absoluteUrlString) {
 var stripIgnoredUrlParameters = function (originalUrl,
     ignoreUrlParametersMatching) {
     var url = new URL(originalUrl);
+    // Remove the hash; see https://github.com/GoogleChrome/sw-precache/issues/290
+    url.hash = '';
 
     url.search = url.search.slice(1) // Exclude initial '?'
       .split('&') // Split into an array of 'key=value' strings
-      .map(function(kv) {
+      .map(function (kv) {
         return kv.split('='); // Split each 'key=value' string into a [key, value] array
       })
-      .filter(function(kv) {
-        return ignoreUrlParametersMatching.every(function(ignoredRegex) {
+      .filter(function (kv) {
+        return ignoreUrlParametersMatching.every(function (ignoredRegex) {
           return !ignoredRegex.test(kv[0]); // Return true iff the key doesn't match any of the regexes.
         });
       })
-      .map(function(kv) {
+      .map(function (kv) {
         return kv.join('='); // Join each [key, value] array into a 'key=value' string
       })
       .join('&'); // Join the array of 'key=value' strings into a string with '&' in between each
@@ -107,7 +131,7 @@ var stripIgnoredUrlParameters = function (originalUrl,
 
 var hashParamName = '_sw-precache';
 var urlsToCacheKeys = new Map(
-  precacheConfig.map(function(item) {
+  precacheConfig.map(function (item) {
     var relativeUrl = item[0];
     var hash = item[1];
     var absoluteUrl = new URL(relativeUrl, self.location);
@@ -117,32 +141,41 @@ var urlsToCacheKeys = new Map(
 );
 
 function setOfCachedUrls(cache) {
-  return cache.keys().then(function(requests) {
-    return requests.map(function(request) {
+  return cache.keys().then(function (requests) {
+    return requests.map(function (request) {
       return request.url;
     });
-  }).then(function(urls) {
+  }).then(function (urls) {
     return new Set(urls);
   });
 }
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', function (event) {
   event.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      return setOfCachedUrls(cache).then(function(cachedUrls) {
+    caches.open(cacheName).then(function (cache) {
+      return setOfCachedUrls(cache).then(function (cachedUrls) {
         return Promise.all(
-          Array.from(urlsToCacheKeys.values()).map(function(cacheKey) {
+          Array.from(urlsToCacheKeys.values()).map(function (cacheKey) {
             // If we don't have a key matching url in the cache already, add it.
             if (!cachedUrls.has(cacheKey)) {
-              return cache.add(new Request(cacheKey, {
-                credentials: 'same-origin',
-                redirect: 'follow'
-              }));
+              var request = new Request(cacheKey, {credentials: 'same-origin'});
+              return fetch(request).then(function (response) {
+                // Bail out of installation unless we get back a 200 OK for
+                // every request.
+                if (!response.ok) {
+                  throw new Error('Request for ' + cacheKey + ' returned a ' +
+                    'response with status ' + response.status);
+                }
+
+                return cleanResponse(response).then(function (responseToCache) {
+                  return cache.put(cacheKey, responseToCache);
+                });
+              });
             }
           })
         );
       });
-    }).then(function() {
+    }).then(function () {
       
       // Force the SW to transition from installing -> active state
       return self.skipWaiting();
@@ -151,21 +184,21 @@ self.addEventListener('install', function(event) {
   );
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', function (event) {
   var setOfExpectedUrls = new Set(urlsToCacheKeys.values());
 
   event.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      return cache.keys().then(function(existingRequests) {
+    caches.open(cacheName).then(function (cache) {
+      return cache.keys().then(function (existingRequests) {
         return Promise.all(
-          existingRequests.map(function(existingRequest) {
+          existingRequests.map(function (existingRequest) {
             if (!setOfExpectedUrls.has(existingRequest.url)) {
               return cache.delete(existingRequest);
             }
           })
         );
       });
-    }).then(function() {
+    }).then(function () {
       
       return self.clients.claim();
       
@@ -174,21 +207,21 @@ self.addEventListener('activate', function(event) {
 });
 
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function (event) {
   if (event.request.method === 'GET') {
     // Should we call event.respondWith() inside this fetch event handler?
     // This needs to be determined synchronously, which will give other fetch
     // handlers a chance to handle the request if need be.
     var shouldRespond;
 
-    // First, remove all the ignored parameter and see if we have that URL
-    // in our cache. If so, great! shouldRespond will be true.
+    // First, remove all the ignored parameters and hash fragment, and see if we
+    // have that URL in our cache. If so, great! shouldRespond will be true.
     var url = stripIgnoredUrlParameters(event.request.url, ignoreUrlParametersMatching);
     shouldRespond = urlsToCacheKeys.has(url);
 
     // If shouldRespond is false, check again, this time with 'index.html'
     // (or whatever the directoryIndex option is set to) at the end.
-    var directoryIndex = 'index.html';
+    var directoryIndex = '';
     if (!shouldRespond && directoryIndex) {
       url = addDirectoryIndex(url, directoryIndex);
       shouldRespond = urlsToCacheKeys.has(url);
@@ -200,7 +233,7 @@ self.addEventListener('fetch', function(event) {
     if (!shouldRespond &&
         navigateFallback &&
         (event.request.mode === 'navigate') &&
-        isPathWhitelisted([], event.request.url)) {
+        isPathWhitelisted(["\\/[^\\/\\.]*(\\?|$)"], event.request.url)) {
       url = new URL(navigateFallback, self.location).toString();
       shouldRespond = urlsToCacheKeys.has(url);
     }
@@ -209,14 +242,14 @@ self.addEventListener('fetch', function(event) {
     // event.respondWith(), using the appropriate cache key.
     if (shouldRespond) {
       event.respondWith(
-        caches.open(cacheName).then(function(cache) {
-          return cache.match(urlsToCacheKeys.get(url)).then(function(response) {
+        caches.open(cacheName).then(function (cache) {
+          return cache.match(urlsToCacheKeys.get(url)).then(function (response) {
             if (response) {
               return response;
             }
             throw Error('The cached response that was expected is missing.');
           });
-        }).catch(function(e) {
+        }).catch(function (e) {
           // Fall back to just fetch()ing the request if some unexpected error
           // prevented the cached response from being valid.
           console.warn('Couldn\'t serve response for "%s" from cache: %O', event.request.url, e);

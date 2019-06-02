@@ -1,11 +1,11 @@
-<html><head><link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../bower_components/iron-icons/image-icons.html">
 <link rel="import" href="author-list.html">
 <link rel="import" href="shared-styles.html">
 
-</head><body><dom-module id="publication-list">
+<dom-module id="publication-list">
   <template>
     <style include="shared-styles">
       :host {
@@ -113,36 +113,37 @@
     </div>
   </template>
 
-  <script>
-    class PublicationList extends Polymer.Element {
-      static get is() { return 'publication-list'; }
+  <script>class PublicationList extends Polymer.Element {
+  static get is() {
+    return 'publication-list';
+  }
 
-      static get properties() {
-        return {
-          publications: {
-            type: Array,
-            value: [],
-          },
-        };
+  static get properties() {
+    return {
+      publications: {
+        type: Array,
+        value: []
       }
+    };
+  }
 
-      _add(i, j) {
-        return i + j;
-      }
+  _add(i, j) {
+    return i + j;
+  }
 
-      _highlightAuthor(author) {
-        return author.indexOf('Nguyen') >= 0;
-      }
+  _highlightAuthor(author) {
+    return author.indexOf('Nguyen') >= 0;
+  }
 
-      _separator(index, length) {
-        if (index == length - 1 || length == 1) {
-          return '.';
-        }
-        return ',';
-      }
+  _separator(index, length) {
+    if (index == length - 1 || length == 1) {
+      return '.';
     }
 
-    window.customElements.define(PublicationList.is, PublicationList);
-  </script>
+    return ',';
+  }
+
+}
+
+window.customElements.define(PublicationList.is, PublicationList);</script>
 </dom-module>
-</body></html>

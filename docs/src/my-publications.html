@@ -1,9 +1,9 @@
-<html><head><link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="publication-list.html">
 
-</head><body><dom-module id="my-publications">
+<dom-module id="my-publications">
   <template>
     <style include="shared-styles">
       :host {
@@ -81,13 +81,12 @@
     </div>
   </template>
 
-  <script>
+  <script>class MyPublications extends Polymer.Element {
+  static get is() {
+    return 'my-publications';
+  }
 
-    class MyPublications extends Polymer.Element {
-      static get is() { return 'my-publications'; }
-    }
+}
 
-    window.customElements.define(MyPublications.is, MyPublications);
-  </script>
+window.customElements.define(MyPublications.is, MyPublications);</script>
 </dom-module>
-</body></html>
